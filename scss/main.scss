@@ -1,0 +1,238 @@
+@use "variables" as *;
+@use "fonts" as *;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.99);
+  position: sticky;
+  width: 100%;
+  height: 100px;
+  z-index: 4;
+  padding: 10px;
+  transition: top 0.3s ease-in-out;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  &.animate {
+    animation: 0.5s forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideDown;
+  }
+
+  @keyframes slideDown {
+    0% {
+      opacity: 0.8;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  img {
+    width: 250px;
+  }
+
+  nav {
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      transition: color 0.1s ease-in;
+      font-size: $font-size-header;
+      font-weight: $font-weight-header;
+      font-family: $font-family;
+
+      &:hover {
+        color: rgba(21, 153, 70, 0.9);
+      }
+    }
+
+    .links {
+      li {
+        list-style-type: none;
+        display: inline-block;
+      }
+    }
+  }
+
+  .burger-bar {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+
+    .line {
+      width: 30px;
+      background-color: #ffffff;
+      border-radius: 15px;
+      height: 4px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &.active .line:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    &.active .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active .line:nth-child(3) {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+
+    @media only screen and (max-width: 768px) {
+      display: flex;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    nav {
+      .links {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+        min-height: 100dvh;
+        background-color: rgba(0, 0, 0, 0.95);
+        opacity: 0;
+        visibility: hidden;
+
+        &.active {
+          left: 0;
+          opacity: 1;
+          visibility: visible;
+        }
+
+        li {
+          text-align: center;
+          margin: 50px;
+        }
+      }
+    }
+  }
+}
+
+// main
+
+// welcome
+
+.welcome {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/welcome.png") center center no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.text-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.text-overlay .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-size: 4rem;
+  margin: 0;
+
+  div {
+    text-align: start;
+
+    & #industry {
+      font-weight: 200;
+      font-size: 2rem;
+    }
+  }
+  img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.text-overlay h2 {
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .text-overlay {
+    padding: 0 15px;
+  }
+
+  .text-overlay #industry {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome {
+    &::before {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .text-overlay {
+    padding: 0 5px;
+  }
+
+  .text-overlay .logo {
+    font-size: 1.5rem;
+    div #industry {
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+  }
+
+  .text-overlay .logo img {
+    width: 200px;
+  }
+}
