@@ -1,3 +1,5 @@
+// header burger bar  and animation
+
 let isMenuOpen = false;
 const header = document.getElementById("header");
 let lastScrollPosition = 0;
@@ -7,14 +9,6 @@ function toggleMenu() {
   document.querySelector(".burger-bar").classList.toggle("active", isMenuOpen);
   document.querySelector(".links").classList.toggle("active", isMenuOpen);
 }
-
-// function setInitialHeaderPosition() {
-//   const currentScrollPosition = window.scrollY;
-//   if (currentScrollPosition > 100) {
-//     header.classList.add("fixed");
-//     header.classList.remove("animate"); // Remove animate class initially if already scrolled
-//   }
-// }
 
 function handleScroll() {
   const currentScrollPosition = window.scrollY;
@@ -27,8 +21,26 @@ function handleScroll() {
   }
 }
 
-// // Set initial header position on load
-// window.addEventListener("load", setInitialHeaderPosition);
-
-// Add scroll event listener
 window.addEventListener("scroll", handleScroll);
+
+// services animaton
+
+document.addEventListener("DOMContentLoaded", function () {
+  const revealElements = document.querySelectorAll(".reveal");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  revealElements.forEach((element) => {
+    observer.observe(element);
+  });
+});

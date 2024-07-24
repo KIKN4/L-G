@@ -11,10 +11,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.99);
+  background-color: rgba(0, 0, 0, 0.95);
   position: sticky;
   width: 100%;
-  height: 100px;
+  height: 80px;
   z-index: 4;
   padding: 10px;
   transition: top 0.3s ease-in-out;
@@ -104,7 +104,7 @@ header {
         position: absolute;
         width: 100%;
         left: -100%;
-        top: 100px;
+        top: 80px;
         display: flex;
         flex-direction: column;
         transition: all 0.3s ease-in-out;
@@ -234,5 +234,190 @@ header {
 
   .text-overlay .logo img {
     width: 200px;
+  }
+}
+
+// services
+
+.services-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: rgb(25, 26, 43);
+}
+
+.service-wrapper {
+  padding: 30px;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: $font-family;
+  letter-spacing: 4px;
+  background-color: rgba(21, 153, 70, 255);
+  background: linear-gradient(
+    8deg,
+    rgba(21, 153, 70, 0.9) 0%,
+    rgba(42, 180, 100, 0.9) 41%,
+    rgba(11, 133, 50, 0.9) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  opacity: 0;
+
+  &.active {
+    animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideDown;
+  }
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: #72e2ae;
+    animation: anim 10s linear infinite;
+  }
+}
+
+@keyframes anim {
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    left: 98%;
+  }
+}
+
+h1:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  height: 6px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 1200px) {
+  .service-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .service-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.service-card {
+  cursor: pointer;
+  height: 300px;
+  width: 320px;
+  padding: 10px;
+  background-color: #1c2335;
+  border: 0.2px solid rgba(114, 226, 174, 0.2);
+  border-radius: 8px;
+  transition: transform 0.6s ease, background-color 0.6s ease,
+    border-color 0.6s ease;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+
+  &:hover {
+    background-color: transparent;
+    border-color: #04cb2f;
+    transform: translate(5px);
+
+    i {
+      color: #04cb2f;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    animation: 1.2s cubic-bezier(0.36, -0.01, 0.5, 1.38) slideLeft;
+  }
+
+  i {
+    color: #72e2ae;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+  }
+
+  h2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  p {
+    text-align: center;
+    width: 100%;
+    margin: 12px 0;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
