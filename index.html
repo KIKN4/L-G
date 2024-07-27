@@ -20,7 +20,6 @@
           <li><a href="#">CONTACT</a></li>
         </ul>
       </nav>
-
       <div class="burger-bar" onclick="toggleMenu()">
         <div class="line"></div>
         <div class="line"></div>
@@ -106,6 +105,138 @@
           </div>
         </div>
       </div>
+      <!-- cards -->
+      <div class="card-container">
+        <div class="card">
+          <div class="container">
+            <div class="image-container">
+              <img
+                class="image-before slider-image"
+                src="./images/before.jpg"
+                alt="color photo"
+              />
+              <img
+                class="image-after slider-image"
+                src="./images/after.jpg"
+                alt="black and white"
+              />
+            </div>
+            <!-- step="10" -->
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              aria-label="Percentage of before photo shown"
+              class="slider"
+            />
+            <div class="slider-line" aria-hidden="true"></div>
+            <div class="slider-button">
+              <i class="fa-solid fa-angle-left"></i>
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+          <h1>Exterior Design</h1>
+          <span>See how your house looks with different exterior designs.</span>
+          <button>Try Now</button>
+        </div>
+        <div class="card">
+          <div class="container">
+            <div class="image-container">
+              <img
+                class="image-before slider-image"
+                src="./images/before.jpg"
+                alt="color photo"
+              />
+              <img
+                class="image-after slider-image"
+                src="./images/after.jpg"
+                alt="black and white"
+              />
+            </div>
+            <!-- step="10" -->
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              aria-label="Percentage of before photo shown"
+              class="slider"
+            />
+            <div class="slider-line" aria-hidden="true"></div>
+            <div class="slider-button">
+              <i class="fa-solid fa-angle-left"></i>
+              <i class="fa-solid fa-angle-right"></i>
+            </div>
+          </div>
+          <h1>Exterior Design</h1>
+          <span>See how your house looks with different exterior designs.</span>
+          <button class="tryBtn">Try Now</button>
+        </div>
+      </div>
+      <!-- contact form  -->
+      <section class="contactContainer">
+        <form action="" class="contactForm" id="contact-form">
+          <div class="info">
+            <img class="contactLogo" src="./images/LG-logo.png" alt="lg-logo" />
+            <span class="contactTitle">100% CUSTOMER SATISFACTION</span>
+            <span class="contactText"
+              >We offer customers reliable and regular paving services for
+              various surfaces, on a scheduled or on-call basis, with a safe and
+              exceptional level of service. Whatever your paving needs, we’ve
+              got a solution that will perfectly suit you.
+            </span>
+          </div>
+          <!-- inputs -->
+          <d class="inputs">
+            <form id="contact-form">
+              <div class="allInput">
+                <section class="inputs1 inputs2">
+                  <div class="inp">
+                    <input
+                      type="text"
+                      name="firstName"
+                      id="firstName"
+                      placeholder="First Name"
+                    />
+                  </div>
+                  <div class="inp">
+                    <input
+                      type="text"
+                      name="lastName"
+                      id="lastName"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                  <div class="inp">
+                    <input
+                      type="text"
+                      name="email"
+                      id="email"
+                      placeholder="E-Mail"
+                    />
+                  </div>
+                  <div class="inp">
+                    <input
+                      type="text"
+                      name="phone"
+                      id="phone"
+                      placeholder="Phone"
+                    />
+                  </div>
+                  <textarea
+                    name="help"
+                    id="help"
+                    placeholder="How We Can Help You?"
+                  ></textarea>
+                </section>
+                <!-- end of inputs -->
+              </div>
+              <button class="btn-stylized" type="submit">Submit</button>
+            </form>
+          </d>
+        </form>
+      </section>
     </main>
     <script
       src="https://kit.fontawesome.com/6f1921bb3a.js"
