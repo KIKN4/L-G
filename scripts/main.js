@@ -101,37 +101,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // slider
-
-const slider = document.querySelector(".slider");
-const items = Array.from(document.querySelectorAll(".item")); // Convert NodeList to Array
-
-function goToNextSlide() {
-  slider.append(items.shift()); // Remove the first item from the array and append it to the end
-  items.push(items[items.length - 1]); // Update the items array
-}
-
-function goToPrevSlide() {
-  slider.prepend(items.pop()); // Remove the last item from the array and prepend it to the start
-  items.unshift(items[0]); // Update the items array
-}
-
-function startAutoSlide() {
-  return setInterval(goToNextSlide, 5000);
-}
-
-// Function to stop auto-slide
-function stopAutoSlide(intervalId) {
-  clearInterval(intervalId);
-}
-
-// Event listener for navigation buttons
-document.querySelector(".next").addEventListener("click", goToNextSlide);
-document.querySelector(".prev").addEventListener("click", goToPrevSlide);
-
-// Start auto-slide on page load
-const autoSlideIntervalId = startAutoSlide();
-
-// Clean up auto-slide on page unload
-window.addEventListener("beforeunload", () =>
-  stopAutoSlide(autoSlideIntervalId)
-);

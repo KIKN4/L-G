@@ -124,78 +124,6 @@
           </div>
         </div>
       </section>
-      <!-- slider -->
-      <section class="slider-container">
-        <ul class="slider">
-          <li class="item item-1">
-            <div class="content">
-              <h2 class="title">Queens</h2>
-              <p class="description">
-                This is one of our largest borough, we provide our service
-                equally across the entire area.
-                <a>Book Online</a> or call us at the number below :
-                <br />
-                <a href="tel:929-930-1525"><span> 929-930-1525</span></a>
-              </p>
-            </div>
-          </li>
-          <li class="item item-2">
-            <div class="content">
-              <h2 class="title">Manhattan</h2>
-              <p class="description">
-                Manhattan - Our team serves all of Manhattan and Harlem.
-                <a>Book Online</a> or call us at the number below : <br />
-                <a href="tel:929-930-1525"><span> 929-930-1525</span></a>
-              </p>
-            </div>
-          </li>
-          <li class="item item-3">
-            <div class="content">
-              <h2 class="title">Brooklyn</h2>
-              <p class="description">
-                We offer our full service across the entire Brooklyn area.
-                <a>Book Online</a> or contact us at the number below :<br />
-                <a href="tel:929-930-1525"><span> 929-930-1525</span></a>
-              </p>
-            </div>
-          </li>
-          <li class="item item-4">
-            <div class="content">
-              <h2 class="title">Queens</h2>
-              <p class="description">
-                This is one of our largest borough, we provide our service
-                equally across the entire area.
-                <a>Book Online</a> or call us at the number below :<br />
-                <a href="tel:929-930-1525"><span> 929-930-1525</span></a>
-              </p>
-            </div>
-          </li>
-          <li class="item item-5">
-            <div class="content">
-              <h2 class="title">Manhattan</h2>
-              <p class="description">
-                Manhattan - Our team serves all of Manhattan and Harlem.
-                <a>Book Online</a> or call us at the number below :<br />
-                <a href="tel:929-930-1525"><span> 929-930-1525</span></a>
-              </p>
-            </div>
-          </li>
-          <li class="item item-6">
-            <div class="content">
-              <h2 class="title">Brooklyn</h2>
-              <p class="description">
-                We offer our full service across the entire Brooklyn area.
-                <a>Book Online</a> or contact us at the number below :<br />
-                <a href="tel:929-930-1525"><span> 929-930-1525</span></a>
-              </p>
-            </div>
-          </li>
-        </ul>
-        <nav class="nav">
-          <i class="btn prev fas fa-arrow-left"></i>
-          <i class="btn next fas fa-arrow-right"></i>
-        </nav>
-      </section>
       <!-- services -->
       <section class="services-container">
         <div class="service-wrapper">
@@ -342,8 +270,8 @@
       <section class="contactContainer">
         <form action="" class="contactForm" id="contact-form">
           <div class="info">
-            <img class="contactLogo" src="./images/LG-logo.png" alt="lg-logo" />
-            <span class="contactTitle">100% CUSTOMER SATISFACTION</span>
+            <h1 class="contactTitle">Contact Us</h1>
+            <span class="contactSubTitle">100% CUSTOMER SATISFACTION</span>
             <span class="contactText"
               >We offer customers reliable and regular paving services for
               various surfaces, on a scheduled or on-call basis, with a safe and
@@ -352,50 +280,43 @@
             </span>
           </div>
           <div class="inputs">
-            <form id="contact-form">
-              <div class="allInput">
-                <section class="inputs1 inputs2">
-                  <div class="inp">
-                    <input
-                      type="text"
-                      name="firstName"
-                      id="firstName"
-                      placeholder="First Name"
-                    />
-                  </div>
-                  <div class="inp">
-                    <input
-                      type="text"
-                      name="lastName"
-                      id="lastName"
-                      placeholder="Last Name"
-                    />
-                  </div>
-                  <div class="inp">
-                    <input
-                      type="text"
-                      name="email"
-                      id="email"
-                      placeholder="E-Mail"
-                    />
-                  </div>
-                  <div class="inp">
-                    <input
-                      type="text"
-                      name="phone"
-                      id="phone"
-                      placeholder="Phone"
-                    />
-                  </div>
-                  <textarea
-                    name="help"
-                    id="help"
-                    placeholder="How We Can Help You?"
-                  ></textarea>
-                </section>
-              </div>
-              <button class="btn-stylized" type="submit">Submit</button>
-            </form>
+            <img class="contactLogo" src="./images/LG-logo.png" alt="lg-logo" />
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              placeholder="First Name"
+              autocomplete="given-name"
+            />
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              placeholder="Last Name"
+              autocomplete="family-name"
+            />
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="E-Mail"
+              autocomplete="email"
+            />
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="Phone"
+              autocomplete="tel"
+            />
+            <textarea
+              name="help"
+              id="help"
+              placeholder="How We Can Help You?"
+              autocomplete="off"
+            ></textarea>
+
+            <button class="btn-stylized" type="submit">Submit</button>
           </div>
         </form>
       </section>
