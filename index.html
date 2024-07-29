@@ -9,26 +9,50 @@
     <script defer src="./scripts/main.js"></script>
   </head>
   <body>
-    <header id="header">
-      <img src="./images/logo.png" alt="l&g sealcoating" />
-      <nav>
-        <ul class="links">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">SERVICES</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">PROJECTS</a></li>
-          <li><a href="#">CONTACT</a></li>
-        </ul>
-      </nav>
-      <div class="burger-bar" onclick="toggleMenu()">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+    <!-- header -->
+    <header class="header">
+      <div class="top-bar">
+        <div class="top-bar__content">
+          <p class="phone">
+            <i class="fa-solid fa-phone icon"></i>
+            <span>(347) 337-3047</span>
+          </p>
+          <p class="email">
+            <i class="fa-solid fa-envelope icon"></i>
+            <span>Lgsealcoatingllc@gmail.com</span>
+          </p>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <div class="bottom-bar__content">
+          <a href="#" class="logo">
+            <img class="logo__img" src="./images/logo.png" alt="logo" />
+          </a>
+
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">Services</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Projects</a>
+              </li>
+              <li class="nav__item">
+                <a class="btn-stylized" href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
       <!-- welcome -->
-      <div class="welcome">
+      <section class="welcome">
         <div class="text-overlay">
           <div class="logo">
             <img src="./images/LG-logo.png" alt="logo" />
@@ -38,9 +62,134 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      <!-- progress -->
+      <section class="progressContainer">
+        <h1 class="progressTitle reveal">Sealcoating Steps</h1>
+        <div class="stepWrapper">
+          <div class="steps reveal">
+            <div class="step">
+              <div class="step-number">01</div>
+              <div class="step-title">Inspection</div>
+            </div>
+            <div class="step">
+              <div class="step-number">02</div>
+              <div class="step-title">Preparation</div>
+            </div>
+          </div>
+          <div class="progress reveal">
+            <div class="progress-bar"></div>
+            <div class="progress-dot reveal"></div>
+            <div class="progress-dot reveal"></div>
+          </div>
+          <div class="descriptions">
+            <div class="step-description">
+              Inspect the surface to identify cracks and damage that need
+              repair.
+            </div>
+            <div class="step-description">
+              Clean the surface and prepare it for sealing to ensure proper
+              adhesion.
+            </div>
+          </div>
+        </div>
+
+        <div class="stepWrapper">
+          <div class="steps reveal">
+            <div class="step">
+              <div class="step-number">03</div>
+              <div class="step-title">Application</div>
+            </div>
+            <div class="step">
+              <div class="step-number">04</div>
+              <div class="step-title">Final Inspection</div>
+            </div>
+          </div>
+
+          <div class="progress reveal">
+            <div class="progress-bar"></div>
+            <div class="progress-dot reveal"></div>
+            <div class="progress-dot reveal"></div>
+          </div>
+
+          <div class="descriptions">
+            <div class="step-description">
+              Apply the sealant evenly over the prepared surface to protect and
+              extend its life.
+            </div>
+            <div class="step-description">
+              Conduct a final inspection to ensure the application is even and
+              up to standards.
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- slider -->
+      <section class="slider-container">
+        <ul class="slider">
+          <li class="item" style="background-image: url('./images/after2.jpg')">
+            <div class="content">
+              <h2 class="title">"Lossless Youths"</h2>
+              <p class="description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tempore fuga voluptatum, iure corporis inventore praesentium
+                nisi. Id laboriosam ipsam enim.
+              </p>
+              <button>Read More</button>
+            </div>
+          </li>
+          <li class="item" style="background-image: url('./images/after1.jpg')">
+            <div class="content">
+              <h2 class="title">"Estrange Bond"</h2>
+              <p class="description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tempore fuga voluptatum, iure corporis inventore praesentium
+                nisi. Id laboriosam ipsam enim.
+              </p>
+              <button>Read More</button>
+            </div>
+          </li>
+          <li class="item" style="background-image: url('./images/after3.jpg')">
+            <div class="content">
+              <h2 class="title">"The Gate Keeper"</h2>
+              <p class="description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tempore fuga voluptatum, iure corporis inventore praesentium
+                nisi. Id laboriosam ipsam enim.
+              </p>
+              <button>Read More</button>
+            </div>
+          </li>
+          <li class="item" style="background-image: url('./images/after2.jpg')">
+            <div class="content">
+              <h2 class="title">"Last Trace Of Us"</h2>
+              <p class="description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tempore fuga voluptatum, iure corporis inventore praesentium
+                nisi. Id laboriosam ipsam enim.
+              </p>
+              <button>Read More</button>
+            </div>
+          </li>
+          <li class="item" style="background-image: url('./images/after1.jpg')">
+            <div class="content">
+              <h2 class="title">"Urban Decay"</h2>
+              <p class="description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tempore fuga voluptatum, iure corporis inventore praesentium
+                nisi. Id laboriosam ipsam enim.
+              </p>
+              <button>Read More</button>
+            </div>
+          </li>
+        </ul>
+        <nav class="nav">
+          <i class="btn prev fa-solid fa-arrow-left"></i>
+          <i class="btn next fa-solid fa-arrow-right"></i>
+        </nav>
+      </section>
       <!-- services -->
-      <div class="services-container">
+      <section class="services-container">
         <div class="service-wrapper">
           <div class="service">
             <h1 class="reveal">Our Services<span></span></h1>
@@ -104,76 +253,83 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- cards -->
-      <div class="card-container">
-        <div class="card">
-          <div class="container">
-            <div class="image-container">
-              <img
-                class="image-before slider-image"
-                src="./images/before.jpg"
-                alt="color photo"
+      <!-- <section class="before-after-section">
+        <h1>Explore Our Before & After Transformations</h1>
+        <div class="card-container">
+          <div class="card">
+            <div class="container">
+              <div class="image-container">
+                <img
+                  class="image-before slider-image"
+                  src="./images/before.jpg"
+                  alt="Before photo"
+                />
+                <img
+                  class="image-after slider-image"
+                  src="./images/after.jpg"
+                  alt="After photo"
+                />
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                aria-label="Percentage of before photo shown"
+                class="slider"
               />
-              <img
-                class="image-after slider-image"
-                src="./images/after.jpg"
-                alt="black and white"
-              />
+              <div class="slider-line" aria-hidden="true"></div>
+              <div class="slider-button">
+                <i class="fa-solid fa-angle-left"></i>
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
             </div>
-            <!-- step="10" -->
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value="50"
-              aria-label="Percentage of before photo shown"
-              class="slider"
-            />
-            <div class="slider-line" aria-hidden="true"></div>
-            <div class="slider-button">
-              <i class="fa-solid fa-angle-left"></i>
-              <i class="fa-solid fa-angle-right"></i>
-            </div>
+            <h2>Compare Exterior Designs</h2>
+            <span
+              >Compare how different exterior designs affect the look of your
+              house.</span
+            >
+            <button class="tryBtn">Try Now</button>
           </div>
-          <h1>Exterior Design</h1>
-          <span>See how your house looks with different exterior designs.</span>
-          <button>Try Now</button>
-        </div>
-        <div class="card">
-          <div class="container">
-            <div class="image-container">
-              <img
-                class="image-before slider-image"
-                src="./images/before.jpg"
-                alt="color photo"
+          <div class="card">
+            <div class="container">
+              <div class="image-container">
+                <img
+                  class="image-before slider-image"
+                  src="./images/before.jpg"
+                  alt="Before photo"
+                />
+                <img
+                  class="image-after slider-image"
+                  src="./images/after.jpg"
+                  alt="After photo"
+                />
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                aria-label="Percentage of before photo shown"
+                class="slider"
               />
-              <img
-                class="image-after slider-image"
-                src="./images/after.jpg"
-                alt="black and white"
-              />
+              <div class="slider-line" aria-hidden="true"></div>
+              <div class="slider-button">
+                <i class="fa-solid fa-angle-left"></i>
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
             </div>
-            <!-- step="10" -->
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value="50"
-              aria-label="Percentage of before photo shown"
-              class="slider"
-            />
-            <div class="slider-line" aria-hidden="true"></div>
-            <div class="slider-button">
-              <i class="fa-solid fa-angle-left"></i>
-              <i class="fa-solid fa-angle-right"></i>
-            </div>
+            <h2>Compare Exterior Designs</h2>
+            <span
+              >Compare how different exterior designs affect the look of your
+              house.</span
+            >
+            <button class="tryBtn">Try Now</button>
           </div>
-          <h1>Exterior Design</h1>
-          <span>See how your house looks with different exterior designs.</span>
-          <button class="tryBtn">Try Now</button>
         </div>
-      </div>
+      </section> -->
       <!-- contact form  -->
       <section class="contactContainer">
         <form action="" class="contactForm" id="contact-form">
@@ -187,8 +343,7 @@
               got a solution that will perfectly suit you.
             </span>
           </div>
-          <!-- inputs -->
-          <d class="inputs">
+          <div class="inputs">
             <form id="contact-form">
               <div class="allInput">
                 <section class="inputs1 inputs2">
@@ -230,11 +385,10 @@
                     placeholder="How We Can Help You?"
                   ></textarea>
                 </section>
-                <!-- end of inputs -->
               </div>
               <button class="btn-stylized" type="submit">Submit</button>
             </form>
-          </d>
+          </div>
         </form>
       </section>
     </main>

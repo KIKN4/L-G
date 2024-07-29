@@ -1,25 +1,22 @@
-let isMenuOpen = false;
-const header = document.getElementById("header");
-let lastScrollPosition = 0;
+// header
 
-function toggleMenu() {
-  isMenuOpen = !isMenuOpen;
-  document.querySelector(".burger-bar").classList.toggle("active", isMenuOpen);
-  document.querySelector(".links").classList.toggle("active", isMenuOpen);
-}
+const navEl = document.querySelector(".nav");
+const hamburgerEl = document.querySelector(".hamburger");
+const navItemEls = document.querySelectorAll(".nav__item");
 
-function handleScroll() {
-  const currentScrollPosition = window.scrollY;
-  if (currentScrollPosition > 150) {
-    header.classList.remove("hidden");
-    header.classList.add("fixed");
-  } else {
-    header.classList.remove("fixed");
-    header.classList.remove("hidden");
-  }
-}
+hamburgerEl.addEventListener("click", () => {
+  navEl.classList.toggle("nav--open");
+  hamburgerEl.classList.toggle("hamburger--open");
+});
 
-window.addEventListener("scroll", handleScroll);
+navItemEls.forEach((navItemEl) => {
+  navItemEl.addEventListener("click", () => {
+    navEl.classList.remove("nav--open");
+    hamburgerEl.classList.remove("hamburger--open");
+  });
+});
+
+// animations
 
 document.addEventListener("DOMContentLoaded", function () {
   const revealElements = document.querySelectorAll(".reveal");
@@ -41,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// before after
+
 const sliders = document.querySelectorAll(".slider");
 const containers = document.querySelectorAll(".container");
 
@@ -57,7 +56,8 @@ sliders.forEach((slider, index) => {
   }
 });
 
-// server
+// server;
+
 document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
@@ -99,3 +99,20 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Form element not found");
   }
 });
+
+// slider
+
+const slider = document.querySelector(".slider");
+const items = Array.from(document.querySelectorAll(".item"));
+
+function activate(e) {
+  if (e.target.matches(".next")) {
+    slider.append(items.shift());
+    items.push(items[items.length - 1]);
+  } else if (e.target.matches(".prev")) {
+    slider.prepend(items.pop());
+    items.unshift(items[0]);
+  }
+}
+
+document.addEventListener("click", activate);
