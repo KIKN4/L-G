@@ -38,24 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// before after
-
-const sliders = document.querySelectorAll(".slider");
-const containers = document.querySelectorAll(".container");
-
-function updateSliderPosition(slider, container) {
-  container.style.setProperty("--position", `${slider.value}%`);
-}
-
-sliders.forEach((slider, index) => {
-  const container = containers[index];
-  if (container) {
-    slider.addEventListener("input", (e) => {
-      updateSliderPosition(e.target, container);
-    });
-  }
-});
-
 // server;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -101,3 +83,87 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // slider
+
+const slider = document.querySelector(".slider");
+
+function activate(e) {
+  const items = document.querySelectorAll(".item");
+  e.target.matches(".next") && slider.append(items[0]);
+  e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+}
+
+document.addEventListener("click", activate, false);
+
+// google map
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Define locations data with coordinates
+  const locations = [
+    {
+      state: "New York",
+      address: "123 NY St, New York, NY 10001",
+      zip: "10001",
+      lat: 40.7128,
+      lng: -74.006,
+    },
+    {
+      state: "New Jersey",
+      address: "456 NJ Ave, Newark, NJ 07101",
+      zip: "07101",
+      lat: 40.7357,
+      lng: -74.1724,
+    },
+    {
+      state: "Pennsylvania",
+      address: "789 PA Blvd, Philadelphia, PA 19103",
+      zip: "19103",
+      lat: 39.9526,
+      lng: -75.1652,
+    },
+    {
+      state: "Connecticut",
+      address: "101 CT Rd, Hartford, CT 06103",
+      zip: "06103",
+      lat: 41.7658,
+      lng: -72.6734,
+    },
+  ];
+
+  // Get the location list container
+  const locationList = document.getElementById("location-list");
+
+  // Create list items for each location
+  locations.forEach((location) => {
+    const li = document.createElement("li");
+    li.className = "location-item";
+    li.innerHTML = `
+          <div class="location-state">${location.state}</div>
+          <div class="location-zip">${location.zip}</div>
+      `;
+    locationList.appendChild(li);
+  });
+
+  // Initialize the map
+  const map = L.map("map").setView([40.7128, -74.006], 6); // Centered on New York with zoom level 6
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map);
+
+  // Define a custom icon using Font Awesome
+  const blackIcon = L.divIcon({
+    className: "custom-icon",
+    html: '<i class="fa-solid fa-location-dot"></i>',
+    iconSize: [32, 32], // Size of the icon
+    iconAnchor: [16, 32], // Anchor point of the icon
+    popupAnchor: [0, -32], // Popup offset
+  });
+
+  // Add markers for each location
+  locations.forEach((location) => {
+    L.marker([location.lat, location.lng], { icon: blackIcon })
+      .addTo(map)
+      .bindPopup(`<b>${location.state}</b><br>Zip Code: ${location.zip}`);
+  });
+});

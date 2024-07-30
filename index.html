@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>L&G Sealcoating</title>
     <link rel="icon" type="image/x-icon" href="./images/LG-logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link />
     <link rel="stylesheet" href="./styles/main.css" />
     <script defer src="./scripts/main.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    ></script>
   </head>
   <body>
     <!-- header -->
@@ -15,11 +24,15 @@
         <div class="top-bar__content">
           <p class="phone">
             <i class="fa-solid fa-phone icon"></i>
-            <span>(347) 337-3047</span>
+            <span><a href="tel:347-337-3047">347-337-3047</a></span>
           </p>
           <p class="email">
             <i class="fa-solid fa-envelope icon"></i>
-            <span>Lgsealcoatingllc@gmail.com</span>
+            <span
+              ><a href="mailto:vladimer.kiknadze44@gmail.com"
+                >lgsealcoatingllc@gmail.com</a
+              ></span
+            >
           </p>
         </div>
       </div>
@@ -28,7 +41,6 @@
           <a href="#" class="logo">
             <img class="logo__img" src="./images/logo.png" alt="logo" />
           </a>
-
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
@@ -124,6 +136,76 @@
           </div>
         </div>
       </section>
+      <!-- slider -->
+      <section class="slider-container">
+        <ul class="slider">
+          <li class="item item-1">
+            <div class="content">
+              <h2 class="title">Comprehensive Road Cleaning</h2>
+              <p class="description">
+                We start by thoroughly cleaning your roads to remove debris,
+                dirt, and stains. This ensures that our sealcoating adheres
+                properly and provides long-lasting protection.
+                <a href="tel:347-337-3047"><span>347-337-3047</span></a> for a
+                free consultation.
+              </p>
+            </div>
+          </li>
+          <li class="item item-2">
+            <div class="content">
+              <h2 class="title">Professional Sealcoating Application</h2>
+              <p class="description">
+                Our skilled technicians apply a high-quality sealcoat to protect
+                and extend the life of your pavement. This protective layer
+                helps resist weathering and enhances the appearance of your
+                surfaces.
+                <a href="tel:347-337-3047"><span>347-337-3047</span></a> for a
+                free consultation.
+              </p>
+            </div>
+          </li>
+          <li class="item item-3">
+            <div class="content">
+              <h2 class="title">Surface Preparation</h2>
+              <p class="description">
+                We prepare the surface by ensuring it is clean and free of any
+                obstructions. This step is essential for achieving an even and
+                effective sealcoat.
+                <a href="tel:347-337-3047"><span>347-337-3047</span></a> for a
+                free consultation.
+              </p>
+            </div>
+          </li>
+          <li class="item item-4">
+            <div class="content">
+              <h2 class="title">Thorough Final Inspection</h2>
+              <p class="description">
+                After application, we conduct a thorough inspection to ensure
+                that the sealcoat is applied evenly and effectively. We ensure
+                that every detail meets our high standards.
+                <a href="tel:347-337-3047"><span>347-337-3047</span></a> for a
+                free consultation.
+              </p>
+            </div>
+          </li>
+          <li class="item item-5">
+            <div class="content">
+              <h2 class="title">Completed Project</h2>
+              <p class="description">
+                View the transformation of your pavement with our completed
+                sealcoating service. Our work not only enhances the look but
+                also extends the life of your surfaces.
+                <a href="tel:347-337-3047"><span>347-337-3047</span></a> for a
+                free consultation.
+              </p>
+            </div>
+          </li>
+        </ul>
+        <nav class="nav">
+          <i class="btn prev fas fa-arrow-left"></i>
+          <i class="btn next fas fa-arrow-right"></i>
+        </nav>
+      </section>
       <!-- services -->
       <section class="services-container">
         <div class="service-wrapper">
@@ -190,82 +272,53 @@
           </div>
         </div>
       </section>
-      <!-- cards -->
-      <!-- <section class="before-after-section">
-        <h1>Explore Our Before & After Transformations</h1>
-        <div class="card-container">
-          <div class="card">
-            <div class="container">
-              <div class="image-container">
-                <img
-                  class="image-before slider-image"
-                  src="./images/before.jpg"
-                  alt="Before photo"
-                />
-                <img
-                  class="image-after slider-image"
-                  src="./images/after.jpg"
-                  alt="After photo"
-                />
-              </div>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                value="50"
-                aria-label="Percentage of before photo shown"
-                class="slider"
-              />
-              <div class="slider-line" aria-hidden="true"></div>
-              <div class="slider-button">
-                <i class="fa-solid fa-angle-left"></i>
-                <i class="fa-solid fa-angle-right"></i>
-              </div>
+      <!-- feedbacks -->
+      <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <p class="subtitle">
+          We pride ourselves on delivering top-quality sealcoating services.
+          Here’s what our satisfied clients have to say about their experience
+          with us.
+        </p>
+        <div class="testimonials-container">
+          <div class="testimonial-card">
+            <div class="image-container">
+              <img src="./images/person1.jpeg" alt="John Smith" />
             </div>
-            <h2>Compare Exterior Designs</h2>
-            <span
-              >Compare how different exterior designs affect the look of your
-              house.</span
-            >
-            <button class="tryBtn">Try Now</button>
+            <p class="quote">
+              "The sealcoating job done by this team was exceptional. Our
+              driveway looks brand new and the service was professional from
+              start to finish. Highly recommend!"
+            </p>
+            <p class="name">Liliana Drew</p>
+            <p class="position">Homeowner</p>
           </div>
-          <div class="card">
-            <div class="container">
-              <div class="image-container">
-                <img
-                  class="image-before slider-image"
-                  src="./images/before.jpg"
-                  alt="Before photo"
-                />
-                <img
-                  class="image-after slider-image"
-                  src="./images/after.jpg"
-                  alt="After photo"
-                />
-              </div>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                value="50"
-                aria-label="Percentage of before photo shown"
-                class="slider"
-              />
-              <div class="slider-line" aria-hidden="true"></div>
-              <div class="slider-button">
-                <i class="fa-solid fa-angle-left"></i>
-                <i class="fa-solid fa-angle-right"></i>
-              </div>
+          <div class="testimonial-card">
+            <div class="image-container">
+              <img src="./images/person2.jpeg" alt="Jane Doe" />
             </div>
-            <h2>Compare Exterior Designs</h2>
-            <span
-              >Compare how different exterior designs affect the look of your
-              house.</span
-            >
-            <button class="tryBtn">Try Now</button>
+            <p class="quote">
+              "I was impressed with the efficiency and quality of the
+              sealcoating service. My parking lot now looks fantastic, and the
+              team worked around our schedule. Excellent work!"
+            </p>
+            <p class="name">Jane Doe</p>
+            <p class="position">Property Manager</p>
+          </div>
+          <div class="testimonial-card">
+            <div class="image-container">
+              <img src="./images/person3.jpeg" alt="Robert Johnson" />
+            </div>
+            <p class="quote">
+              "Their sealcoating service transformed the appearance of our
+              commercial property. The team was skilled, prompt, and very
+              courteous. We’ll definitely use them again."
+            </p>
+            <p class="name">Robert Johnson</p>
+            <p class="position">Business Owner</p>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- contact form  -->
       <section class="contactContainer">
         <form action="" class="contactForm" id="contact-form">
@@ -319,6 +372,41 @@
             <button class="btn-stylized" type="submit">Submit</button>
           </div>
         </form>
+      </section>
+      <section class="main-section">
+        <h1>Our Locations the Map</h1>
+
+        <!-- Main Content -->
+        <div class="map-container">
+          <!-- Map Section -->
+          <div id="map" class="map"></div>
+
+          <!-- Info Section -->
+          <div class="info-container">
+            <!-- Locations Section (Dynamic) -->
+            <div class="info-list">
+              <h2>Locations</h2>
+              <ul id="location-list">
+                <!-- List items will be dynamically inserted here by JavaScript -->
+              </ul>
+            </div>
+
+            <!-- Staic Contact Details Section -->
+            <div class="info-details">
+              <h2>Contact Information</h2>
+              <div>
+                <p><strong>Address:</strong> New Jersey | 20 W Harriet Ave</p>
+                <p><strong>Phone:</strong> <a href="tel:347-337-3047">  347-337-3047 </p></a>
+                <p>
+                  <strong>Email:</strong>
+                  <a href="mailto:lgsealcoatingllc@gmail.com"
+                    >lgsealcoatingllc@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <script
