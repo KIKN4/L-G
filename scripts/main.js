@@ -1,37 +1,88 @@
-// header
+/*
+
+  header
+
+*/
 
 const navEl = document.querySelector(".nav");
 const hamburgerEl = document.querySelector(".hamburger");
 const navItemEls = document.querySelectorAll(".nav__item");
 
-hamburgerEl.addEventListener("click", () => {
-  navEl.classList.toggle("nav--open");
-  hamburgerEl.classList.toggle("hamburger--open");
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav__link");
 
-navItemEls.forEach((navItemEl) => {
-  navItemEl.addEventListener("click", () => {
-    navEl.classList.remove("nav--open");
-    hamburgerEl.classList.remove("hamburger--open");
+  // Smooth scrolling
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = e.target.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+      window.scrollTo({
+        top: targetSection.offsetTop - 150, // Adjust this value based on your header height
+        behavior: "smooth",
+      });
+    });
   });
-});
 
-// before after
+  // Active link switching
+  window.addEventListener("scroll", () => {
+    let scrollPosition = window.scrollY;
 
-let currentIndex = 0;
-const slides = document.querySelector(".gallery-slide");
-const totalItems = document.querySelectorAll(".gallery-item").length;
+    sections.forEach((section) => {
+      let sectionTop = section.offsetTop - 350; // Adjust this value based on your header height
+      let sectionHeight = section.offsetHeight;
+      let sectionId = section.getAttribute("id");
 
-function moveSlide(direction) {
-  currentIndex += direction;
-  if (currentIndex < 0) currentIndex = totalItems - 1;
-  if (currentIndex >= totalItems) currentIndex = 0;
-  slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
+      if (
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionTop + sectionHeight
+      ) {
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${sectionId}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  });
 
-// animations
+  hamburgerEl.addEventListener("click", () => {
+    navEl.classList.toggle("nav--open");
+    hamburgerEl.classList.toggle("hamburger--open");
+  });
 
-document.addEventListener("DOMContentLoaded", function () {
+  navItemEls.forEach((navItemEl) => {
+    navItemEl.addEventListener("click", () => {
+      navEl.classList.remove("nav--open");
+      hamburgerEl.classList.remove("hamburger--open");
+    });
+  });
+
+  /*
+
+before after
+
+*/
+
+  let currentIndex = 0;
+  const slides = document.querySelector(".gallery-slide");
+  const totalItems = document.querySelectorAll(".gallery-item").length;
+
+  function moveSlide(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = totalItems - 1;
+    if (currentIndex >= totalItems) currentIndex = 0;
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  /*
+
+ animations
+
+*/
+
   const revealElements = document.querySelectorAll(".reveal");
 
   const observer = new IntersectionObserver(
@@ -49,22 +100,28 @@ document.addEventListener("DOMContentLoaded", function () {
   revealElements.forEach((element) => {
     observer.observe(element);
   });
-});
 
-// slider
+  /*
 
-const slider = document.querySelector(".slider");
-document.addEventListener("click", activate, false);
+ slider
 
-function activate(e) {
-  const items = document.querySelectorAll(".item");
-  e.target.matches(".next") && slider.append(items[0]);
-  e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
-}
+*/
 
-// google map
+  const slider = document.querySelector(".slider");
+  document.addEventListener("click", activate, false);
 
-document.addEventListener("DOMContentLoaded", function () {
+  function activate(e) {
+    const items = document.querySelectorAll(".item");
+    e.target.matches(".next") && slider.append(items[0]);
+    e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+  }
+
+  /*
+
+  google map
+
+*/
+
   // Define locations data with coordinates
   const locations = [
     {
@@ -134,11 +191,9 @@ document.addEventListener("DOMContentLoaded", function () {
       .addTo(map)
       .bindPopup(`<b>${location.state}</b><br>Zip Code: ${location.zip}`);
   });
-});
 
-// server;
+  // server;
 
-document.addEventListener("DOMContentLoaded", function () {
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (event) {

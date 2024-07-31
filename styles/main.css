@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgb(14, 15, 24);
 }
@@ -14,7 +18,8 @@ body {
   header
 */
 .header {
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   z-index: 9999;
   /* For JS */
@@ -85,11 +90,15 @@ body {
   font-weight: 500;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.75);
-  transition: all 0.2s;
+  transition: color ease 0.3s;
 }
 .header .nav__link:hover,
 .header .nav__link:focus {
   color: #157347;
+}
+.header .nav__link.active {
+  color: #18a362;
+  font-weight: 500;
 }
 .header .btn-stylized {
   font-family: "Montserrat", sans-serif;
@@ -247,6 +256,92 @@ body {
   }
   .welcome .text-overlay .logo img {
     width: 200px;
+  }
+}
+
+/* 
+  about us
+*/
+.about-section {
+  background: url("../images/background.png") no-repeat left;
+  background-size: 55%;
+  overflow: hidden;
+  padding: 100px 0;
+}
+.about-section .inner-container {
+  width: 55%;
+  float: right;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 100px 40px;
+}
+.about-section .inner-container h1 {
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+}
+.about-section .inner-container .text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+.about-section .inner-container .text i {
+  font-size: 25px;
+}
+.about-section .inner-container .skills {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 5px;
+}
+.about-section .inner-container .skills span {
+  font-family: "Montserrat", sans-serif;
+  flex: 1 1 auto;
+  margin: 8px;
+  color: #0ba75e;
+}
+.about-section .inner-container .skills span i {
+  font-size: 25px;
+  color: white;
+}
+@media screen and (max-width: 600px) {
+  .about-section .inner-container .skills {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  .about-section .inner-container {
+    padding: 40px;
+  }
+  .about-section .inner-container h1 {
+    font-size: 24px;
+  }
+  .about-section .inner-container .text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .about-section {
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+  }
+  .about-section .inner-container {
+    width: 100%;
+  }
+  .about-section .inner-container .skills-head {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .about-section {
+    padding: 40px 20px;
   }
 }
 
@@ -556,7 +651,6 @@ body {
     font-size: 1.8rem;
   }
   .gallery-container .gallery-header p {
-    font-size: 12px;
     padding: 0 10px;
   }
   .gallery-container .gallery .gallery-item {
@@ -579,7 +673,7 @@ body {
     background: none;
     font-size: 35px;
     border: none;
-    color: #000000;
+    color: #ffffff;
   }
 }
 @media (max-width: 768px) and (max-width: 480px) {
@@ -687,7 +781,7 @@ body {
   font-display: swap;
 }
 .slider-container .content .title {
-  color: rgb(0, 106, 255);
+  color: #198754;
   font-size: 1.9rem;
   text-transform: uppercase;
 }

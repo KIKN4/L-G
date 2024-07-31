@@ -44,13 +44,16 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a class="nav__link" href="#">Services</a>
+                <a class="nav__link" href="#about">About us</a>
               </li>
               <li class="nav__item">
-                <a class="nav__link" href="#">Projects</a>
+                <a class="nav__link" href="#projects">Projects</a>
               </li>
               <li class="nav__item">
-                <a class="btn-stylized" href="#">Contact</a>
+                <a class="nav__link" href="#services">Services</a>
+              </li>
+              <li class="nav__item">
+                <a class="btn-stylized" href="#contact">Contact</a>
               </li>
             </ul>
           </nav>
@@ -75,7 +78,31 @@
           </div>
         </div>
       </section>
-      <!-- progress -->m
+      <!-- progress -->
+      <!-- about us -->
+      <section class="about-container" id="about">
+        <div class="about-section">
+          <div class="inner-container">
+            <h1>About Us</h1>
+            <p class="text">
+              We specialize in enhancing and protecting asphalt surfaces with
+              top-quality services. From driveway and parking lot sealants to
+              crack filling and repair, our expert team ensures long-lasting
+              results. We offer parking lot striping, surface cleaning, and both
+              spray and brush coating options to extend the life and improve the
+              look of your asphalt. Trust us for professional and reliable
+              sealcoating services.
+            </p>
+            <div class="skills">
+              <span>Sealcoating Application</span>
+              <span>Asphalt Repair</span>
+              <span>Surface Preparation</span>
+              <span>Project Management</span>
+              <span>Safety Compliance</span>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="progressContainer">
         <h1 class="progressTitle reveal">Sealcoating Steps</h1>
         <div class="stepWrapper">
@@ -137,7 +164,7 @@
         </div>
       </section>
       <!-- before&after -->
-      <section class="gallery-container">
+      <section class="gallery-container" id="projects">
         <div class="gallery-header reveal">
           <h1>Our Projects</h1>
           <p>
@@ -153,17 +180,22 @@
                 <img src="./images/before1.jpg" alt="Before Image" />
                 <div class="image-label">Before</div>
                 <div class="image-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                  repudiandae, assumenda explicabo odio illum qui ad quo
-                  exercitationem natus eum eos quod cumque incidunt
-                  necessitatibus? Tempora rem possimus dolorem quibusdam?
+                  Cracks and Wear: The driveway shows visible cracks and wear,
+                  indicating damage to the surface. This is likely due to
+                  weathering, usage, and possibly inadequate maintenance over
+                  time.
                 </div>
               </div>
               <div class="gallery-image">
                 <img src="./images/after1.jpg" alt="After Image" />
                 <div class="image-label">After</div>
                 <div class="image-description">
-                  This is the description for the After image.
+                  <p>
+                    Barrier Tape and Signage: Yellow barrier tape and a sign are
+                    placed across the entrance of the driveway to prevent access
+                    while the sealant cures, ensuring it sets properly and
+                    provides maximum protection.
+                  </p>
                 </div>
               </div>
             </div>
@@ -172,14 +204,18 @@
                 <img src="./images/before2.jpg" alt="Before Image" />
                 <div class="image-label">Before</div>
                 <div class="image-description">
-                  This is the description for the Before image.
+                  Rich, Dark Finish: Faded Appearance: The asphalt appears faded
+                  and less vibrant, which is typical as it ages and gets exposed
+                  to the elements.
                 </div>
               </div>
               <div class="gallery-image">
                 <img src="./images/after2.jpg" alt="After Image" />
                 <div class="image-label">After</div>
                 <div class="image-description">
-                  This is the description for the After image.
+                  The resealed driveway has a rich, dark appearance, which is
+                  typical of freshly applied sealcoat. This not only improves
+                  aesthetics but also provides a protective layer.
                 </div>
               </div>
             </div>
@@ -188,14 +224,18 @@
                 <img src="./images/before3.jpg" alt="Before Image" />
                 <div class="image-label">Before</div>
                 <div class="image-description">
-                  This is the description for the Before image.
+                  Uneven Surface: The surface looks uneven in places, which
+                  could be due to settling or previous patchwork that has
+                  deteriorated.
                 </div>
               </div>
               <div class="gallery-image">
                 <img src="./images/after3.jpg" alt="After Image" />
                 <div class="image-label">After</div>
                 <div class="image-description">
-                  This is the description for the After image.
+                  Protective Sealant Applied: The driveway has been treated with
+                  a sealant that helps protect against further weather damage,
+                  UV rays, and wear from vehicle traffic.
                 </div>
               </div>
             </div>
@@ -279,7 +319,7 @@
         </nav>
       </section>
       <!-- services -->
-      <section class="services-container">
+      <section class="services-container" id="services">
         <div class="service-wrapper">
           <div class="service">
             <h1 class="reveal">Our Services<span></span></h1>
@@ -392,7 +432,7 @@
         </div>
       </section>
       <!-- contact form  -->
-      <section class="contactContainer">
+      <section class="contactContainer" id="contact">
         <h1 id="sectionTitle">Book Now</h1>
         <form action="" class="contactForm" id="contact-form">
           <div class="info">
@@ -406,7 +446,11 @@
             </span>
           </div>
           <div class="inputs">
-            <img class="contactLogo" src="./images/LG-logo.png" alt="lg-logo" />
+            <img
+              class="contactLogo"
+              src="./images/LG-logo2.png"
+              alt="lg-logo"
+            />
             <input
               type="text"
               name="firstName"
@@ -441,7 +485,6 @@
               placeholder="How We Can Help You?"
               autocomplete="off"
             ></textarea>
-
             <button class="btn-stylized" type="submit">Submit</button>
           </div>
         </form>
