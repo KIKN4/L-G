@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>L&G Sealcoating</title>
     <link rel="icon" type="image/x-icon" href="./images/LG-logo.png" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
     <link />
-    <link rel="stylesheet" href="./styles/main.css" />
-    <script defer src="./scripts/main.js"></script>
     <script
       defer
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     ></script>
+    <script defer src="./scripts/main.js"></script>
   </head>
   <body>
     <!-- header -->
@@ -75,7 +75,7 @@
           </div>
         </div>
       </section>
-      <!-- progress -->
+      <!-- progress -->m
       <section class="progressContainer">
         <h1 class="progressTitle reveal">Sealcoating Steps</h1>
         <div class="stepWrapper">
@@ -134,6 +134,78 @@
               up to standards.
             </div>
           </div>
+        </div>
+      </section>
+      <!-- before&after -->
+      <section class="gallery-container">
+        <div class="gallery-header reveal">
+          <h1>Our Projects</h1>
+          <p>
+            See the transformation of roads and surfaces before and after our
+            sealcoating services. Swipe through to witness the quality of our
+            work.
+          </p>
+        </div>
+        <div class="gallery">
+          <div class="gallery-slide">
+            <div class="gallery-item">
+              <div class="gallery-image">
+                <img src="./images/before1.jpg" alt="Before Image" />
+                <div class="image-label">Before</div>
+                <div class="image-description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                  repudiandae, assumenda explicabo odio illum qui ad quo
+                  exercitationem natus eum eos quod cumque incidunt
+                  necessitatibus? Tempora rem possimus dolorem quibusdam?
+                </div>
+              </div>
+              <div class="gallery-image">
+                <img src="./images/after1.jpg" alt="After Image" />
+                <div class="image-label">After</div>
+                <div class="image-description">
+                  This is the description for the After image.
+                </div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div class="gallery-image">
+                <img src="./images/before2.jpg" alt="Before Image" />
+                <div class="image-label">Before</div>
+                <div class="image-description">
+                  This is the description for the Before image.
+                </div>
+              </div>
+              <div class="gallery-image">
+                <img src="./images/after2.jpg" alt="After Image" />
+                <div class="image-label">After</div>
+                <div class="image-description">
+                  This is the description for the After image.
+                </div>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <div class="gallery-image">
+                <img src="./images/before3.jpg" alt="Before Image" />
+                <div class="image-label">Before</div>
+                <div class="image-description">
+                  This is the description for the Before image.
+                </div>
+              </div>
+              <div class="gallery-image">
+                <img src="./images/after3.jpg" alt="After Image" />
+                <div class="image-label">After</div>
+                <div class="image-description">
+                  This is the description for the After image.
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="nav-button prev" onclick="moveSlide(-1)">
+            &#10094;
+          </button>
+          <button class="nav-button next" onclick="moveSlide(1)">
+            &#10095;
+          </button>
         </div>
       </section>
       <!-- slider -->
@@ -214,7 +286,7 @@
             <div class="service-cards">
               <div class="service-card reveal">
                 <i class="fa-solid fa-road"></i>
-                <h2>Driveway, Parking Lot, and Road Sealants</h2>
+                <h2>Driveway and Parking Lot Sealants</h2>
                 <p>
                   Extend the life of your driveway, parking lot, and road
                   surfaces with our professional sealcoating services. We use
@@ -274,53 +346,54 @@
       </section>
       <!-- feedbacks -->
       <section class="testimonials">
-        <h2>What Our Clients Say</h2>
-        <p class="subtitle">
+        <h2 class="reveal">What Our Clients Say</h2>
+        <p class="subtitle reveal">
           We pride ourselves on delivering top-quality sealcoating services.
           Here’s what our satisfied clients have to say about their experience
           with us.
         </p>
         <div class="testimonials-container">
           <div class="testimonial-card">
-            <div class="image-container">
+            <div class="image-container reveal">
               <img src="./images/person1.jpeg" alt="John Smith" />
             </div>
-            <p class="quote">
+            <p class="quote reveal">
               "The sealcoating job done by this team was exceptional. Our
               driveway looks brand new and the service was professional from
               start to finish. Highly recommend!"
             </p>
-            <p class="name">Liliana Drew</p>
-            <p class="position">Homeowner</p>
+            <p class="name reveal">Liliana Drew</p>
+            <p class="position reveal">Homeowner</p>
           </div>
           <div class="testimonial-card">
-            <div class="image-container">
+            <div class="image-container reveal">
               <img src="./images/person2.jpeg" alt="Jane Doe" />
             </div>
-            <p class="quote">
+            <p class="quote reveal">
               "I was impressed with the efficiency and quality of the
               sealcoating service. My parking lot now looks fantastic, and the
               team worked around our schedule. Excellent work!"
             </p>
-            <p class="name">Jane Doe</p>
-            <p class="position">Property Manager</p>
+            <p class="name reveal">Jane Doe</p>
+            <p class="position reveal">Property Manager</p>
           </div>
           <div class="testimonial-card">
-            <div class="image-container">
+            <div class="image-container reveal">
               <img src="./images/person3.jpeg" alt="Robert Johnson" />
             </div>
-            <p class="quote">
+            <p class="quote reveal">
               "Their sealcoating service transformed the appearance of our
               commercial property. The team was skilled, prompt, and very
               courteous. We’ll definitely use them again."
             </p>
-            <p class="name">Robert Johnson</p>
-            <p class="position">Business Owner</p>
+            <p class="name reveal">Robert Johnson</p>
+            <p class="position reveal">Business Owner</p>
           </div>
         </div>
       </section>
       <!-- contact form  -->
       <section class="contactContainer">
+        <h1 id="sectionTitle">Book Now</h1>
         <form action="" class="contactForm" id="contact-form">
           <div class="info">
             <h1 class="contactTitle">Contact Us</h1>
@@ -374,13 +447,11 @@
         </form>
       </section>
       <section class="main-section">
-        <h1>Our Locations the Map</h1>
-
+        <h1>Our Locations on the Map</h1>
         <!-- Main Content -->
         <div class="map-container">
           <!-- Map Section -->
           <div id="map" class="map"></div>
-
           <!-- Info Section -->
           <div class="info-container">
             <!-- Locations Section (Dynamic) -->
@@ -390,18 +461,30 @@
                 <!-- List items will be dynamically inserted here by JavaScript -->
               </ul>
             </div>
-
             <!-- Staic Contact Details Section -->
             <div class="info-details">
               <h2>Contact Information</h2>
               <div>
-                <p><strong>Address:</strong> New Jersey | 20 W Harriet Ave</p>
-                <p><strong>Phone:</strong> <a href="tel:347-337-3047">  347-337-3047 </p></a>
                 <p>
-                  <strong>Email:</strong>
-                  <a href="mailto:lgsealcoatingllc@gmail.com"
-                    >lgsealcoatingllc@gmail.com</a
-                  >
+                  <i class="fa-brands fa-square-facebook"></i>
+                  <span>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61559853105627"
+                      >L&G SEALCOATING LLC
+                    </a>
+                  </span>
+                </p>
+                <p>
+                  <i class="fa-solid fa-phone"></i>
+                  <span><a href="tel:347-337-3047">347-337-3047</a></span>
+                </p>
+                <p>
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>
+                    <a href="mailto:lgsealcoatingllc@gmail.com"
+                      >lgsealcoatingllc@gmail.com</a
+                    >
+                  </span>
                 </p>
               </div>
             </div>

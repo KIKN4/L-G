@@ -16,6 +16,19 @@ navItemEls.forEach((navItemEl) => {
   });
 });
 
+// before after
+
+let currentIndex = 0;
+const slides = document.querySelector(".gallery-slide");
+const totalItems = document.querySelectorAll(".gallery-item").length;
+
+function moveSlide(direction) {
+  currentIndex += direction;
+  if (currentIndex < 0) currentIndex = totalItems - 1;
+  if (currentIndex >= totalItems) currentIndex = 0;
+  slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
 // animations
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -38,61 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// server;
-
-document.addEventListener("DOMContentLoaded", function () {
-  const contactForm = document.getElementById("contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const formData = {
-        firstName: document.getElementById("firstName").value,
-        lastName: document.getElementById("lastName").value,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
-        help: document.getElementById("help").value,
-      };
-
-      console.log("Form Data:", formData); // Log form data to verify
-
-      fetch("http://localhost:3000/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.error) {
-            alert("Failed to send email: " + data.error);
-          } else {
-            alert("Email sent successfully!");
-            contactForm.reset();
-          }
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-          alert("Failed to send email");
-        });
-    });
-  } else {
-    console.error("Form element not found");
-  }
-});
-
 // slider
 
 const slider = document.querySelector(".slider");
+document.addEventListener("click", activate, false);
 
 function activate(e) {
   const items = document.querySelectorAll(".item");
   e.target.matches(".next") && slider.append(items[0]);
   e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
 }
-
-document.addEventListener("click", activate, false);
 
 // google map
 
@@ -166,4 +134,48 @@ document.addEventListener("DOMContentLoaded", function () {
       .addTo(map)
       .bindPopup(`<b>${location.state}</b><br>Zip Code: ${location.zip}`);
   });
+});
+
+// server;
+
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const formData = {
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        help: document.getElementById("help").value,
+      };
+
+      console.log("Form Data:", formData); // Log form data to verify
+
+      fetch("http://localhost:3000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.error) {
+            alert("Failed to send email: " + data.error);
+          } else {
+            alert("Email sent successfully!");
+            contactForm.reset();
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("Failed to send email");
+        });
+    });
+  } else {
+    console.error("Form element not found");
+  }
 });
