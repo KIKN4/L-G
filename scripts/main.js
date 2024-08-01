@@ -22,103 +22,37 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav__link");
   const footerLinks = document.querySelectorAll("#useful-links .links a");
   const serviceLinks = document.querySelectorAll("#services .links a");
-  const sections = document.querySelectorAll("section");
-  const offset = 50;
   const headerHeight = document.querySelector(".header").offsetHeight;
+  const offset = 50;
+
+  function handleLinkClick(e) {
+    e.preventDefault();
+    const targetId = e.target.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+    const targetPosition = targetSection.offsetTop - headerHeight - offset;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+    e.target.classList.add("active");
+  }
 
   navLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = e.target.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
-      const targetPosition = targetSection.offsetTop - headerHeight - offset;
-
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth",
-      });
-
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-      });
-      e.target.classList.add("active");
-    });
+    link.addEventListener("click", handleLinkClick);
   });
 
   footerLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = e.target.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
-      const targetPosition = targetSection.offsetTop - headerHeight - offset;
-
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth",
-      });
-    });
+    link.addEventListener("click", handleLinkClick);
   });
 
   serviceLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const targetId = e.target.getAttribute("href").substring(1);
-      const targetSection = document.getElementById(targetId);
-      const targetPosition = targetSection.offsetTop - headerHeight - offset;
-
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth",
-      });
-
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-      });
-      e.target.classList.add("active");
-    });
+    link.addEventListener("click", handleLinkClick);
   });
-
-  window.addEventListener("scroll", () => {
-    let scrollPosition = window.scrollY + headerHeight + offset;
-
-    sections.forEach((section) => {
-      let sectionTop = section.offsetTop;
-      let sectionHeight = section.offsetHeight;
-      let sectionId = section.getAttribute("id");
-
-      if (
-        scrollPosition >= sectionTop &&
-        scrollPosition < sectionTop + sectionHeight
-      ) {
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href").substring(1) === sectionId) {
-            link.classList.add("active");
-          }
-        });
-      }
-    });
-  });
-
-  // Check URL hash on load and scroll to the section
-  if (window.location.hash) {
-    const targetId = window.location.hash.substring(1);
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      const targetPosition = targetSection.offsetTop - headerHeight - offset;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth",
-      });
-      // Assign the active class on load
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").substring(1) === targetId) {
-          link.classList.add("active");
-        }
-      });
-    }
-  }
 });
 
 // before after
