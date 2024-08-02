@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-// html {
-//   scroll-behavior: smooth;
-// }
-
 body {
   background-color: rgb(14, 15, 24);
 }
@@ -1508,71 +1504,40 @@ body {
       background-color: #3a3a3a;
       box-shadow: 0 0 5px rgba(24, 149, 65, 0.5);
     }
-  }
 
-  .btn-stylized {
-    background-color: $main-color;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+    button {
+      background-color: $main-color;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 15px; // Added margin-top
+    }
 
-  .btn-stylized:hover {
-    background-color: $hover-color;
+    button:hover {
+      background-color: $hover-color;
+    }
   }
 
   @media (max-width: 768px) {
     .contactForm {
-      flex-direction: column;
-      margin: 50px auto;
-
-      .info,
-      .inputs {
-        width: 100%;
-      }
+      flex-direction: column; // Changed flex-direction to column
+      width: 90%;
     }
 
-    .info {
-      .contactSubTitle {
-        font-size: 20px;
-      }
-
-      .contactText {
-        font-size: 14px;
-      }
+    .info,
+    .inputs {
+      width: 100%; // Set width to 100%
+      padding: 20px; // Adjusted padding
     }
 
     .inputs {
-      border-left: none;
-      padding: 30px 10px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .info {
-      padding: 10px;
-      gap: 10px;
-
-      .contactTitle {
-        font-size: 2rem;
-      }
-
-      .contactLogo {
-        width: 100px;
-      }
-
-      .contactSubTitle {
-        font-size: 1rem;
-      }
-
-      .contactText {
-        font-size: 12px;
-      }
+      border-left: none; // Removed left border
+      padding: 20px 10px; // Adjusted padding
     }
   }
 }

@@ -1320,7 +1320,7 @@ body {
   background-color: #3a3a3a;
   box-shadow: 0 0 5px rgba(24, 149, 65, 0.5);
 }
-.contactContainer .btn-stylized {
+.contactContainer .inputs button {
   background-color: #198754;
   color: #fff;
   border: none;
@@ -1330,46 +1330,24 @@ body {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 15px;
 }
-.contactContainer .btn-stylized:hover {
+.contactContainer .inputs button:hover {
   background-color: #157347;
 }
 @media (max-width: 768px) {
   .contactContainer .contactForm {
     flex-direction: column;
-    margin: 50px auto;
+    width: 90%;
   }
-  .contactContainer .contactForm .info,
-  .contactContainer .contactForm .inputs {
+  .contactContainer .info,
+  .contactContainer .inputs {
     width: 100%;
-  }
-  .contactContainer .info .contactSubTitle {
-    font-size: 20px;
-  }
-  .contactContainer .info .contactText {
-    font-size: 14px;
+    padding: 20px;
   }
   .contactContainer .inputs {
     border-left: none;
-    padding: 30px 10px;
-  }
-}
-@media (max-width: 480px) {
-  .contactContainer .info {
-    padding: 10px;
-    gap: 10px;
-  }
-  .contactContainer .info .contactTitle {
-    font-size: 2rem;
-  }
-  .contactContainer .info .contactLogo {
-    width: 100px;
-  }
-  .contactContainer .info .contactSubTitle {
-    font-size: 1rem;
-  }
-  .contactContainer .info .contactText {
-    font-size: 12px;
+    padding: 20px 10px;
   }
 }
 
