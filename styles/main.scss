@@ -1383,6 +1383,7 @@ body {
   #sectionTitle {
     color: #ffffff;
     font-family: $font-family;
+    margin-bottom: 20px;
     font-size: 2.4em;
     z-index: 2;
   }
@@ -1422,7 +1423,6 @@ body {
 
     .contactTitle {
       font-size: 2.5rem;
-      margin-bottom: 20px;
       font-family: $font-family;
       color: #159946;
     }
@@ -1528,16 +1528,29 @@ body {
   @media (max-width: 768px) {
     .contactForm {
       flex-direction: column;
-      height: 100dvh;
     }
 
-    .info,
+    .info {
+      width: 100%;
+      padding: 10px;
+      gap: 10px;
+
+      .contactTitle {
+        font-size: 2rem;
+      }
+
+      .contactSubTitle {
+        font-size: 1rem;
+        margin-bottom: 0;
+      }
+
+      .contactText {
+        font-size: 0.8rem;
+      }
+    }
+
     .inputs {
       width: 100%;
-      padding: 20px;
-    }
-
-    .inputs {
       border-left: none;
       padding: 20px 10px;
     }
