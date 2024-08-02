@@ -45,6 +45,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   font-size: 13px;
   color: #fff;
 }
@@ -53,7 +54,7 @@ body {
   color: rgba(255, 255, 255, 0.17);
 }
 .header .bottom-bar {
-  background-color: rgba(19, 22, 26, 0.99);
+  background-color: rgb(19, 22, 26);
 }
 .header .bottom-bar__content {
   min-height: 60px;
@@ -260,7 +261,7 @@ body {
 */
 .about-section {
   background: url("../images/background.png") no-repeat left;
-  background-size: 55%;
+  background-size: contain;
   overflow: hidden;
   padding: 100px 0;
 }
@@ -779,7 +780,7 @@ body {
 }
 .slider-container .content .title {
   color: #198754;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 .slider-container .content .description {
@@ -1196,7 +1197,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 100dvh;
-  margin: 50px auto;
   background-image: url("../images/background2.png");
   background-size: contain;
   background-position: center;
@@ -1337,9 +1337,6 @@ body {
   background-color: #157347;
 }
 @media (max-width: 768px) {
-  .contactContainer {
-    padding: 20px 0;
-  }
   .contactContainer .contactForm {
     flex-direction: column;
     max-width: 65%;
@@ -1357,6 +1354,7 @@ body {
   .contactContainer .inputs {
     border-left: none;
     padding-top: 0;
+    padding: 10px;
   }
 }
 @media (max-width: 480px) {
@@ -1449,7 +1447,8 @@ body {
   padding: 12px;
   border-radius: 6px;
   box-shadow: 0 2px 12px rgba(112, 110, 110, 0.1);
-  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -1468,6 +1467,7 @@ body {
   text-align: center;
   margin-top: 0;
   color: #5959bf;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   border-bottom: 2px solid #5959bf;
   padding-bottom: 10px;
@@ -1492,6 +1492,7 @@ body {
 
 .info-details p {
   font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   margin-bottom: 15px;
   font-size: 16px;
   cursor: pointer;
@@ -1610,13 +1611,15 @@ footer .row {
   align-items: center;
 }
 footer .col {
+  display: flex;
+  flex-direction: column;
   min-width: 250px;
   color: rgba(242, 242, 242, 0.9490196078);
   font-family: "Montserrat", sans-serif;
   padding: 0 2rem;
 }
 footer .col .logo {
-  width: 200px;
+  width: 150px;
 }
 footer .col h3 {
   color: #198754;
@@ -1676,7 +1679,6 @@ footer .col .links a:hover {
 }
 footer .col .contact-details {
   display: inline-flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
   cursor: pointer;
