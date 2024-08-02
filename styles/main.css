@@ -272,7 +272,6 @@ body {
   padding: 100px 40px;
 }
 .about-section .inner-container h1 {
-  margin-bottom: 30px;
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
   font-weight: 900;
@@ -1208,7 +1207,6 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 2.4em;
   z-index: 2;
-  margin-bottom: 30px;
 }
 .contactContainer::before {
   content: "";
@@ -1339,7 +1337,7 @@ body {
 @media (max-width: 768px) {
   .contactContainer .contactForm {
     flex-direction: column;
-    margin: auto;
+    margin: 50px auto;
   }
   .contactContainer .contactForm .info,
   .contactContainer .contactForm .inputs {
