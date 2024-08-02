@@ -1339,7 +1339,7 @@ body {
 @media (max-width: 768px) {
   .contactContainer .contactForm {
     flex-direction: column;
-    max-width: 65%;
+    margin: auto;
   }
   .contactContainer .contactForm .info,
   .contactContainer .contactForm .inputs {
