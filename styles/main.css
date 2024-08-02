@@ -1353,8 +1353,7 @@ body {
   }
   .contactContainer .inputs {
     border-left: none;
-    padding-top: 0;
-    padding: 10px;
+    padding: 30px 10px;
   }
 }
 @media (max-width: 480px) {
@@ -1373,10 +1372,6 @@ body {
   }
   .contactContainer .info .contactText {
     font-size: 12px;
-  }
-  .contactContainer .inputs {
-    padding: 10px;
-    padding-top: 0;
   }
 }
 

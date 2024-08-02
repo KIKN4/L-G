@@ -106,7 +106,7 @@ body {
 
   .nav__link:hover,
   .nav__link:focus {
-    color: $hover;
+    color: $hover-color;
   }
 
   .nav__link.active {
@@ -1532,6 +1532,7 @@ body {
     .contactForm {
       flex-direction: column;
       max-width: 65%;
+
       .info,
       .inputs {
         width: 100%;
@@ -1550,8 +1551,7 @@ body {
 
     .inputs {
       border-left: none;
-      padding-top: 0;
-      padding: 10px;
+      padding: 30px 10px;
     }
   }
 
@@ -1575,11 +1575,6 @@ body {
       .contactText {
         font-size: 12px;
       }
-    }
-
-    .inputs {
-      padding: 10px;
-      padding-top: 0;
     }
   }
 }
