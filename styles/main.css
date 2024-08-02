@@ -1340,6 +1340,7 @@ body {
 @media (max-width: 768px) {
   .contactContainer .contactForm {
     flex-direction: column;
+    height: 100dvh;
   }
   .contactContainer .info,
   .contactContainer .inputs {

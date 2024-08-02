@@ -1528,6 +1528,7 @@ body {
   @media (max-width: 768px) {
     .contactForm {
       flex-direction: column;
+      height: 100dvh;
     }
 
     .info,
