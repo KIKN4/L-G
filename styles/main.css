@@ -1195,10 +1195,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100dvh;
   background-image: url("../images/background2.png");
   background-size: contain;
   background-position: center;
+  min-height: 100dvh;
+  padding: 50px 0;
   position: relative;
   color: #fff;
 }
@@ -1241,6 +1242,7 @@ body {
 }
 .contactContainer .info .contactTitle {
   font-size: 2.5rem;
+  margin-bottom: 20px;
   font-family: "Montserrat", sans-serif;
   color: #159946;
 }
@@ -1338,7 +1340,6 @@ body {
 @media (max-width: 768px) {
   .contactContainer .contactForm {
     flex-direction: column;
-    width: 90%;
   }
   .contactContainer .info,
   .contactContainer .inputs {
@@ -1355,7 +1356,6 @@ body {
   map
 */
 .main-section {
-  margin-top: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1417,7 +1417,6 @@ body {
   height: 50px;
   padding: 12px;
   border-radius: 6px;
-  box-shadow: 0 2px 12px rgba(112, 110, 110, 0.1);
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   overflow: hidden;
@@ -1437,10 +1436,10 @@ body {
   width: 100%;
   text-align: center;
   margin-top: 0;
-  color: #5959bf;
+  color: #198754;
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
-  border-bottom: 2px solid #5959bf;
+  border-bottom: 2px solid #198754;
   padding-bottom: 10px;
 }
 
@@ -1455,9 +1454,9 @@ body {
   align-self: start;
   text-align: center;
   margin-top: 0;
-  color: #5959bf;
+  color: #198754;
   font-size: 20px;
-  border-bottom: 2px solid #5959bf;
+  border-bottom: 2px solid #198754;
   padding-bottom: 10px;
 }
 
@@ -1470,7 +1469,7 @@ body {
 }
 .info-details p i {
   min-width: 22px;
-  color: #5959bf;
+  color: #198754;
 }
 
 .info-details div {

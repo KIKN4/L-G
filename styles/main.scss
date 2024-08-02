@@ -1372,10 +1372,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100dvh;
   background-image: url("../images/background2.png");
   background-size: contain;
   background-position: center;
+  min-height: 100dvh;
+  padding: 50px 0;
   position: relative;
   color: #fff;
 
@@ -1421,6 +1422,7 @@ body {
 
     .contactTitle {
       font-size: 2.5rem;
+      margin-bottom: 20px;
       font-family: $font-family;
       color: #159946;
     }
@@ -1515,7 +1517,7 @@ body {
       font-weight: bold;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      margin-top: 15px; // Added margin-top
+      margin-top: 15px;
     }
 
     button:hover {
@@ -1525,19 +1527,18 @@ body {
 
   @media (max-width: 768px) {
     .contactForm {
-      flex-direction: column; // Changed flex-direction to column
-      width: 90%;
+      flex-direction: column;
     }
 
     .info,
     .inputs {
-      width: 100%; // Set width to 100%
-      padding: 20px; // Adjusted padding
+      width: 100%;
+      padding: 20px;
     }
 
     .inputs {
-      border-left: none; // Removed left border
-      padding: 20px 10px; // Adjusted padding
+      border-left: none;
+      padding: 20px 10px;
     }
   }
 }
@@ -1547,7 +1548,6 @@ body {
 */
 
 .main-section {
-  margin-top: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1555,9 +1555,11 @@ body {
   width: 100%;
   margin: auto;
   padding: 50px 0;
+
   .leaflet-attribution-flag {
     display: none !important;
   }
+
   .leaflet-control-attribution a:hover {
     text-decoration: none !important;
   }
@@ -1609,7 +1611,6 @@ body {
   height: 50px;
   padding: 12px;
   border-radius: 6px;
-  box-shadow: 0 2px 12px rgb(112 110 110 / 10%);
   font-family: $font-family;
   font-size: 14px;
   overflow: hidden;
@@ -1630,10 +1631,10 @@ body {
   width: 100%;
   text-align: center;
   margin-top: 0;
-  color: #5959bf;
+  color: $main-color;
   font-family: $font-family;
   font-size: 20px;
-  border-bottom: 2px solid #5959bf;
+  border-bottom: 2px solid $main-color;
   padding-bottom: 10px;
 }
 
@@ -1648,9 +1649,9 @@ body {
   align-self: start;
   text-align: center;
   margin-top: 0;
-  color: #5959bf;
+  color: $main-color;
   font-size: 20px;
-  border-bottom: 2px solid #5959bf;
+  border-bottom: 2px solid $main-color;
   padding-bottom: 10px;
 }
 
@@ -1663,7 +1664,7 @@ body {
 
   i {
     min-width: 22px;
-    color: #5959bf;
+    color: $main-color;
   }
 }
 
