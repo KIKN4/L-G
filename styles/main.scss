@@ -79,7 +79,8 @@ body {
   }
 
   .logo__img {
-    width: 220px;
+    max-width: 250px;
+    width: 100%;
     height: auto;
   }
 
@@ -254,8 +255,9 @@ body {
         font-size: 2rem;
       }
     }
+
     img {
-      max-width: 350px;
+      max-width: 330px;
       width: 100%;
       height: auto;
     }
@@ -443,6 +445,7 @@ body {
       text-align: left;
 
       .step-number {
+        font-family: $font-family;
         font-size: 2em;
         font-weight: bold;
         color: $main-color;
@@ -1815,6 +1818,10 @@ footer {
     width: 150px;
   }
 
+  .col p {
+    max-width: 300px;
+  }
+
   .col h3 {
     color: $main-color;
     margin-bottom: 20px;
@@ -1835,19 +1842,6 @@ footer {
 
   .col h3:hover::after {
     width: 30px;
-  }
-
-  .col .social a i {
-    cursor: pointer;
-    color: $main-color;
-    margin-top: 2rem;
-    margin-right: 5px;
-    transition: 0.3s ease;
-  }
-
-  .col .social a i:hover {
-    transform: scale(1.5);
-    filter: grayscale(25);
   }
 
   .col .links a {

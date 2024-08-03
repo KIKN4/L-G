@@ -71,7 +71,8 @@ body {
   height: 60px;
 }
 .header .logo__img {
-  width: 220px;
+  max-width: 250px;
+  width: 100%;
   height: auto;
 }
 .header .nav {
@@ -80,7 +81,7 @@ body {
 .header .nav__list {
   display: flex;
   -moz-column-gap: 40px;
-  column-gap: 40px;
+       column-gap: 40px;
 }
 .header .nav__link {
   font-family: "Montserrat", sans-serif;
@@ -222,7 +223,7 @@ body {
   font-size: 2rem;
 }
 .welcome .text-overlay .logo img {
-  max-width: 350px;
+  max-width: 330px;
   width: 100%;
   height: auto;
 }
@@ -389,6 +390,7 @@ body {
   text-align: left;
 }
 .progressContainer .steps .step .step-number {
+  font-family: "Montserrat", sans-serif;
   font-size: 2em;
   font-weight: bold;
   color: #198754;
@@ -585,12 +587,7 @@ body {
   height: auto;
   display: block;
 }
-.gallery-container
-  .gallery
-  .gallery-slide
-  .gallery-item
-  .gallery-image
-  .image-label {
+.gallery-container .gallery .gallery-slide .gallery-item .gallery-image .image-label {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -603,12 +600,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
 }
-.gallery-container
-  .gallery
-  .gallery-slide
-  .gallery-item
-  .gallery-image
-  .image-description {
+.gallery-container .gallery .gallery-slide .gallery-item .gallery-image .image-description {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -748,8 +740,7 @@ body {
 .slider-container .item.item-5 {
   background-image: url("../photos/photo5.jpg");
 }
-.slider-container .item:nth-child(1),
-.slider-container .item:nth-child(2) {
+.slider-container .item:nth-child(1), .slider-container .item:nth-child(2) {
   left: 0;
   top: 0;
   width: 100%;
@@ -833,8 +824,8 @@ body {
   transform: translateX(-50%);
   z-index: 2;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .slider-container .nav .btn {
   background-color: rgba(255, 255, 255, 0.5);
@@ -1084,12 +1075,7 @@ body {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 4px;
   background-color: rgb(21, 153, 70);
-  background: linear-gradient(
-    8deg,
-    rgba(21, 153, 70, 0.9) 0%,
-    rgba(42, 180, 100, 0.9) 41%,
-    rgba(11, 133, 50, 0.9) 100%
-  );
+  background: linear-gradient(8deg, rgba(21, 153, 70, 0.9) 0%, rgba(42, 180, 100, 0.9) 41%, rgba(11, 133, 50, 0.9) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1144,8 +1130,7 @@ body {
   background-color: #1c2335;
   border: 0.2px solid #1c2335;
   border-radius: 8px;
-  transition: transform 0.6s, background-color 0.6s ease, border-color 0.6s ease,
-    box-shadow 0.6s ease;
+  transition: transform 0.6s, background-color 0.6s ease, border-color 0.6s ease, box-shadow 0.6s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1619,6 +1604,9 @@ footer .col {
 footer .col .logo {
   width: 150px;
 }
+footer .col p {
+  max-width: 300px;
+}
 footer .col h3 {
   color: #198754;
   margin-bottom: 20px;
@@ -1637,17 +1625,6 @@ footer .col h3::after {
 }
 footer .col h3:hover::after {
   width: 30px;
-}
-footer .col .social a i {
-  cursor: pointer;
-  color: #198754;
-  margin-top: 2rem;
-  margin-right: 5px;
-  transition: 0.3s ease;
-}
-footer .col .social a i:hover {
-  transform: scale(1.5);
-  filter: grayscale(25);
 }
 footer .col .links a {
   display: block;
@@ -1768,4 +1745,4 @@ footer .col .contact-details p a {
     opacity: 0;
     left: 98%;
   }
-}
+}/*# sourceMappingURL=main.css.map */
