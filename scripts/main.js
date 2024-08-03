@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // slider
 
 const slider = document.querySelector(".slider");
-// document.addEventListener("click", activate, false);
 const slidCont = document.getElementById("slider-container");
 
 slidCont.addEventListener("click", activate, false);
