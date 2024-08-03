@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
         help: document.getElementById("help").value,
       };
 
-      fetch("http://localhost:3000/send-email", {
+      fetch("https://lgsealcoating.com/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
