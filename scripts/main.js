@@ -55,6 +55,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// faq
+
+const faqs = document.querySelectorAll(".faq-container");
+
+faqs.forEach((faq) => {
+  faq.addEventListener("click", () => {
+    faq.classList.toggle("active");
+  });
+});
+
 // before after
 
 let currentIndex = 0;
