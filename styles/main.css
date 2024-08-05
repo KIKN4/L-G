@@ -101,7 +101,7 @@ address {
 .header .nav__list {
   display: flex;
   -moz-column-gap: 40px;
-       column-gap: 40px;
+  column-gap: 40px;
 }
 .header .nav__link {
   font-family: "Montserrat", sans-serif;
@@ -382,7 +382,12 @@ address {
   font-weight: 800;
   text-align: center;
   margin-bottom: 20px;
-  background: linear-gradient(8deg, rgba(21, 153, 70, 0.9) 0%, rgba(42, 180, 100, 0.9) 41%, rgba(11, 133, 50, 0.9) 100%);
+  background: linear-gradient(
+    8deg,
+    rgba(21, 153, 70, 0.9) 0%,
+    rgba(42, 180, 100, 0.9) 41%,
+    rgba(11, 133, 50, 0.9) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -390,11 +395,15 @@ address {
 .faq-section .faq-container {
   max-width: 700px;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   cursor: pointer;
   border-bottom: 0.1px solid #ffffff;
   padding: 10px 20px;
   transition: background-color 0.3s ease-in-out;
+}
+.faq-section .faq-container.active {
+  background-color: rgba(39, 44, 51, 0.3);
+  border-radius: 8px;
 }
 .faq-section .faq-container.active .faq-answer {
   max-height: 300px;
@@ -402,6 +411,10 @@ address {
 }
 .faq-section .faq-container.active svg {
   transform: rotate(180deg);
+}
+.faq-section .faq-container:hover {
+  background-color: rgba(39, 44, 51, 0.3);
+  border-radius: 8px;
 }
 .faq-section .faq-container svg {
   transition: transform 0.3s ease-in;
@@ -413,7 +426,6 @@ address {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
-  padding-left: 0;
 }
 .faq-section .faq-question h3 {
   font-family: "Montserrat", sans-serif;
@@ -701,7 +713,12 @@ address {
   height: auto;
   display: block;
 }
-.gallery-container .gallery .gallery-slide .gallery-item .gallery-image .image-label {
+.gallery-container
+  .gallery
+  .gallery-slide
+  .gallery-item
+  .gallery-image
+  .image-label {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -714,7 +731,12 @@ address {
   font-weight: 700;
   text-transform: uppercase;
 }
-.gallery-container .gallery .gallery-slide .gallery-item .gallery-image .image-description {
+.gallery-container
+  .gallery
+  .gallery-slide
+  .gallery-item
+  .gallery-image
+  .image-description {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -854,7 +876,8 @@ address {
 .slider-container .item.item-5 {
   background-image: url("../images/photo5.webp");
 }
-.slider-container .item:nth-child(1), .slider-container .item:nth-child(2) {
+.slider-container .item:nth-child(1),
+.slider-container .item:nth-child(2) {
   left: 0;
   top: 0;
   width: 100%;
@@ -938,8 +961,8 @@ address {
   transform: translateX(-50%);
   z-index: 2;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 .slider-container .nav .btn {
   background-color: rgba(255, 255, 255, 0.5);
@@ -1189,7 +1212,12 @@ address {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 4px;
   background-color: rgb(21, 153, 70);
-  background: linear-gradient(8deg, rgba(21, 153, 70, 0.9) 0%, rgba(42, 180, 100, 0.9) 41%, rgba(11, 133, 50, 0.9) 100%);
+  background: linear-gradient(
+    8deg,
+    rgba(21, 153, 70, 0.9) 0%,
+    rgba(42, 180, 100, 0.9) 41%,
+    rgba(11, 133, 50, 0.9) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1244,7 +1272,8 @@ address {
   background-color: #1c2335;
   border: 0.2px solid #1c2335;
   border-radius: 8px;
-  transition: transform 0.6s, background-color 0.6s ease, border-color 0.6s ease, box-shadow 0.6s ease;
+  transition: transform 0.6s, background-color 0.6s ease, border-color 0.6s ease,
+    box-shadow 0.6s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1874,4 +1903,4 @@ footer .col .contact-details p a {
     opacity: 1;
     transform: translateY(0px);
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */

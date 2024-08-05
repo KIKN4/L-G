@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="ExpExpert sealcoating services for driveways and parking lots in New Jersey. Protect your surfaces with our professional sealants and repairs. Get a free quote today!"
+      content="Expert sealcoating services for driveways and parking lots in New Jersey. Protect your surfaces with our professional sealants and repairs. Get a free quote today!"
     />
     <meta
       name="keywords"
@@ -44,17 +44,23 @@
       New Jersey
     </title>
     <link rel="icon" type="image/x-icon" href="./images/logo2.webp" />
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="./styles/main.css" />
+        <noscript>
+        <link rel="stylesheet" href="./styles/main.css">
+    </noscript>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
     <link />
+    <style>
+      .btn-stylized:hover,.header .btn-stylized:hover{background-color:#157347}.header .btn-stylized,.header .nav__link,.header .top-bar__content,.welcome .text-overlay .logo{font-family:Montserrat,sans-serif}*{padding:0;margin:0;box-sizing:border-box}body{background-color:#0e0f18}.visually-hidden{display:none}address{font-style:normal}.mt-4{margin-top:1rem}.d-block{display:block}.btn-stylized{color:#fff;padding:2px}.btn-stylized:hover{border-radius:4px}.header{position:fixed;top:0;width:100%;z-index:9999}.header button{background:0 0;border:none;font:inherit;color:inherit}.header ul{list-style:none}.header a{text-decoration:none;color:inherit}.header .top-bar{background-color:#272c33}.header .top-bar__content{height:30px;padding:0 20px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-weight:500;font-size:13px;color:#fff}.header .icon{margin-right:3px;color:rgba(255,255,255,.17)}.header .bottom-bar{background-color:#13161a}.header .bottom-bar__content{min-height:60px;max-width:1200px;padding:0 30px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}.header .logo{display:flex;align-items:center;height:60px}.header .logo__img{max-width:220px;width:100%;height:auto}.header .nav{transition:.3s ease-in-out}.header .nav__list{display:flex;column-gap:40px}.header .nav__link{font-weight:500;font-size:14px;color:rgba(255,255,255,.75);transition:color .3s}.header .nav__link:focus,.header .nav__link:hover{color:#157347}.header .nav__link.active{color:#18a362;font-weight:500}.header .btn-stylized{color:#fff;background-color:#198754;padding:8px 20px;border-radius:1000px;text-transform:uppercase;font-size:12px;font-weight:500;cursor:pointer;transition:background-color .3s}.header .hamburger{cursor:pointer;display:none}.header .bar{height:2px;width:27px;background-color:#fff;margin:5px 0;opacity:.8;transition:.3s ease-in-out}.header .nav--open{left:50%!important}.header .hamburger--open .bar:first-child{transform:translateY(7px) rotate(45deg)}.header .hamburger--open .bar:nth-child(2){opacity:0}.header .hamburger--open .bar:nth-child(3){transform:translateY(-7px) rotate(-45deg)}@media (max-width:650px){.header .nav{position:fixed;top:90px;left:-100%;transform:translateX(-50%);background-color:#13161a;width:100%;padding:10px 0 25px}.header .nav__list{flex-direction:column;align-items:center;row-gap:20px}.header .nav__link{font-size:14px}.header .btn{font-size:11px;padding:7px 17px}.header .hamburger{display:block}}@media (max-width:460px){.header .top-bar__content{font-size:12px;padding:0 10px}}.welcome{width:100%;height:100vh;background:url("../images/welcome.webp") center/cover no-repeat;position:relative;display:flex;align-items:center;justify-content:center;z-index:0}.welcome::before{content:"";position:absolute;top:0;left:0;width:100%;background-color:rgba(0,0,0,.3);height:100%;z-index:-1}.welcome .text-overlay{display:flex;flex-direction:column;justify-content:center;text-align:center;color:#fff;z-index:1;padding:0 20px}.welcome .text-overlay .logo{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;font-weight:600;font-style:italic;font-size:4rem;margin:0}.welcome .text-overlay .logo div{text-align:start}.welcome .text-overlay .logo div #industry{font-weight:200;font-size:2rem}.welcome .text-overlay .logo img{max-width:300px;width:100%;height:auto}.welcome .text-overlay h2{font-size:1.5rem}@media only screen and (max-width:768px){.welcome .text-overlay{padding:0 15px}.welcome .text-overlay #industry{font-size:1.2rem}}@media (max-width:480px){.welcome .welcome::before{background-color:rgba(0,0,0,.6)}.welcome .text-overlay{padding:0 5px}.welcome .text-overlay .logo{font-size:1.5rem}.welcome .text-overlay .logo div #industry{font-size:1.3rem;font-weight:400}.welcome .text-overlay .logo img{width:200px}}
+    </style>
     <script
       defer
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     ></script>
-    <script defer src="./scripts/main.js"></script>
+    <script defer src="./scripts/main.min.js"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -104,7 +110,7 @@
           <a href="index.html" class="logo">
             <img
               class="logo__img"
-              src="./images/logo.webp"
+              src="./images/LG-logo2.webp"
               alt="lg-sealcoating-logo"
             />
           </a>
@@ -389,7 +395,7 @@
           <div class="gallery-slide">
             <div class="gallery-item">
               <div class="gallery-image">
-                <img src="./images/before1.webp" alt="Cracks and Wear Image" />
+                <img loading="lazy"  src="./images/before1.webp" alt="Cracks and Wear Image" />
                 <div class="image-label">Before</div>
                 <div class="image-description">
                   Cracks and Wear: The driveway shows visible cracks and wear,
@@ -400,6 +406,7 @@
               </div>
               <div class="gallery-image">
                 <img
+                loading="lazy" 
                   src="./images/after1.webp"
                   alt="Barrier Tape and Signage Image"
                 />
@@ -417,6 +424,7 @@
             <div class="gallery-item">
               <div class="gallery-image">
                 <img
+                loading="lazy" 
                   src="./images/before2.webp"
                   alt="Rich, Dark Finish: Faded Appearance Image"
                 />
@@ -428,7 +436,7 @@
                 </div>
               </div>
               <div class="gallery-image">
-                <img src="./images/after2.webp" alt="Sealcoat Image" />
+                <img loading="lazy" src="./images/after2.webp" alt="Sealcoat Image" />
                 <div class="image-label">After</div>
                 <div class="image-description">
                   The resealed driveway has a rich, dark appearance, which is
@@ -439,7 +447,7 @@
             </div>
             <div class="gallery-item">
               <div class="gallery-image">
-                <img src="./images/before3.webp" alt="Uneven Surface Image" />
+                <img loading="lazy" src="./images/before3.webp" alt="Uneven Surface Image" />
                 <div class="image-label">Before</div>
                 <div class="image-description">
                   Uneven Surface: The surface looks uneven in places, which
@@ -449,7 +457,7 @@
               </div>
               <div class="gallery-image">
                 <img
-                  src="./images/after3.webp"
+                  loading="lazy" src="./images/after3.webp"
                   alt="Protective Sealant Applied Image"
                 />
                 <div class="image-label">After</div>
@@ -631,7 +639,7 @@
         <div class="testimonials-container">
           <div class="testimonial-card">
             <div class="image-container reveal">
-              <img src="./images/person1.webp" alt="Liliana Drew" />
+              <img loading="lazy" src="./images/person1.webp" alt="Liliana Drew" />
             </div>
             <p class="quote reveal">
               "The sealcoating job done by this team was exceptional. Our
@@ -643,7 +651,7 @@
           </div>
           <div class="testimonial-card">
             <div class="image-container reveal">
-              <img src="./images/person2.webp" alt="Ingrid Dixon" />
+              <img loading="lazy" src="./images/person2.webp" alt="Ingrid Dixon" />
             </div>
             <p class="quote reveal">
               "I was impressed with the efficiency and quality of the
@@ -655,7 +663,7 @@
           </div>
           <div class="testimonial-card">
             <div class="image-container reveal">
-              <img src="./images/person3.webp" alt="Robert Johnson" />
+              <img loading="lazy" src="./images/person3.webp" alt="Robert Johnson" />
             </div>
             <p class="quote reveal">
               "Their sealcoating service transformed the appearance of our
@@ -683,6 +691,7 @@
           </div>
           <div class="inputs">
             <img
+            loading="lazy" 
               class="contactLogo"
               src="./images/LG-logo2.webp"
               alt="lg-sealcoating-logo"
@@ -771,7 +780,8 @@
         <div class="row">
           <div class="col" id="company">
             <img
-              src="images/LG-logo2.webp"
+            loading="lazy" 
+              src="images/LG-logo.webp"
               alt=""
               class="lg-sealcoating-logo"
             />

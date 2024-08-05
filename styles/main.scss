@@ -25,8 +25,13 @@ address {
   display: block;
 }
 
+.btn-stylized {
+  color: #fff;
+  padding:2px;
+}
 .btn-stylized:hover {
   background-color: $hover-color;
+  border-radius: 4px;
 }
 
 /*
@@ -1948,7 +1953,7 @@ footer {
     padding: 0 2rem;
   }
 
-  .col .logo {
+  .col .lg-sealcoating-logo {
     width: 150px;
   }
 
