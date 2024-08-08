@@ -56,8 +56,8 @@ address {
   }
 
   a {
-    text-decoration: none;
-    color: inherit;
+    all: unset;
+    font-size: 0.8rem;
   }
 
   .top-bar {
@@ -65,21 +65,25 @@ address {
   }
 
   .top-bar__content {
-    height: 30px;
-    padding: 0 20px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 30px;
+    padding: 0 30px;
     font-family: $font-family;
-    font-weight: 500;
-    font-size: 13px;
     color: #fff;
   }
 
+  .email,
+  .phone {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
   .icon {
-    margin-right: 3px;
     color: rgba(255, 255, 255, 0.17);
+    font-size: 0.8rem;
   }
 
   .bottom-bar {
@@ -96,14 +100,28 @@ address {
     align-items: center;
   }
 
-  .logo {
+  .bottom-bar__logo {
     display: flex;
     align-items: center;
-    height: 60px;
+    gap: 10px;
+
+    div {
+      color: #fff;
+      font-family: $font-family;
+      p:nth-child(1) {
+        font-weight: 400;
+      }
+      p:nth-child(2) {
+        font-weight: 200;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 4.2px;
+      }
+    }
   }
 
   .logo__img {
-    max-width: 220px;
+    max-width: 38px;
     width: 100%;
     height: auto;
   }
@@ -184,7 +202,7 @@ address {
   }
 
   /* MEDIA QUERIES */
-  @media (max-width: 650px) {
+  @media (max-width: 750px) {
     .nav {
       position: fixed;
       top: 90px;
@@ -213,12 +231,43 @@ address {
     .hamburger {
       display: block;
     }
+
+    .bottom-bar__logo {
+      div {
+        p:nth-child(1) {
+          font-weight: 300;
+          font-size: 0.9rem;
+        }
+        p:nth-child(2) {
+          font-size: 0.6rem;
+          letter-spacing: 5px;
+        }
+      }
+    }
+
+    .logo__img {
+      max-width: 30px;
+      width: 100%;
+      height: auto;
+    }
+
+    .icon,
+    a {
+      font-size: 0.7rem;
+    }
   }
 
   @media (max-width: 460px) {
-    .top-bar__content {
-      font-size: 12px;
-      padding: 0 10px;
+    .bottom-bar__logo {
+      div {
+        p:nth-child(1) {
+          font-size: 0.8rem;
+        }
+        p:nth-child(2) {
+          font-size: 0.6rem;
+          letter-spacing: 3.3px;
+        }
+      }
     }
   }
 }
@@ -257,7 +306,6 @@ address {
     text-align: center;
     color: white;
     z-index: 1;
-    padding: 0 20px;
   }
 
   .text-overlay .logo {
@@ -265,63 +313,64 @@ address {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    font-weight: 600;
-    font-family: $font-family;
-    font-style: italic;
-    font-size: 4rem;
-    margin: 0;
 
     div {
       text-align: start;
+      font-family: $font-family;
+      font-style: italic;
 
-      & #industry {
-        font-weight: 200;
+      p:nth-child(1) {
+        font-size: 3.5rem;
+        font-weight: 500;
+      }
+      p:nth-child(2) {
         font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 25px;
       }
     }
 
     img {
-      max-width: 300px;
+      max-width: 250px;
       width: 100%;
       height: auto;
     }
   }
 
-  .text-overlay h2 {
-    font-size: 1.5rem;
-  }
-
-  @media only screen and (max-width: 768px) {
-    .text-overlay {
-      padding: 0 15px;
-    }
-
-    .text-overlay #industry {
-      font-size: 1.2rem;
+  @media only screen and (max-width: 800px) {
+    .text-overlay .logo {
+      div {
+        p:nth-child(1) {
+          font-size: 3rem;
+          font-weight: 400;
+        }
+        p:nth-child(2) {
+          font-size: 1.8rem;
+          font-weight: 200;
+          letter-spacing: 20px;
+        }
+      }
+      img {
+        max-width: 200px;
+      }
     }
   }
 
   @media (max-width: 480px) {
-    .welcome {
-      &::before {
-        background-color: rgba(0, 0, 0, 0.6);
-      }
-    }
-
-    .text-overlay {
-      padding: 0 5px;
-    }
-
     .text-overlay .logo {
-      font-size: 1.5rem;
-      div #industry {
-        font-size: 1.3rem;
-        font-weight: 400;
-      }
-    }
+      div {
+        p:nth-child(1) {
+          font-size: 2rem;
+        }
+        p:nth-child(2) {
+          font-size: 1.3rem;
 
-    .text-overlay .logo img {
-      width: 200px;
+          letter-spacing: 12px;
+        }
+      }
+      img {
+        max-width: 150px;
+      }
     }
   }
 }
@@ -527,11 +576,17 @@ address {
 }
 
 .eco-friendly-info .btn-stylized {
-  font-family: $font-family;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #198754;
   color: #fff;
+  margin: auto;
+  max-width: 500px;
   padding: 10px;
   border-radius: 5px;
+  text-align: center;
+  font-family: $font-family;
   text-decoration: none;
 }
 
@@ -907,7 +962,7 @@ address {
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            height: 25%;
+            height: 23%;
             width: 100%;
             background-color: rgba(0, 0, 0, 0.6);
             color: #fff;
@@ -977,10 +1032,7 @@ address {
           position: relative;
 
           .image-description {
-            font-size: 12px;
-            padding: 6px 8px;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 0.8rem !important;
           }
         }
       }
