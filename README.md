@@ -1,8 +1,8 @@
-## Welcome to the LG Sealcoating GitHub repository! This project showcases the website for LG Sealcoating, a professional service provider specializing in sealcoating and pavement maintenance.
+## This project showcases the website for LG Sealcoating, a professional service provider specializing in sealcoating and pavement maintenance.
 
 ## Website Overview
 
-Visit our website: https://lgsealcoating.netlify.app/
+Visit our website: https://lgsealcoating.com
 
 ## Features
 
@@ -22,4 +22,4 @@ Spray Coating and Brush Coating
 
 ## Technologies Used
 
-Frontend: HTML, CSS, JavaScript
+Frontend: HTML, CSS, JavaScript, php
